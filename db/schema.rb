@@ -10,13 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171031001536) do
+ActiveRecord::Schema.define(version: 20171031014142) do
 
   create_table "spookers", force: :cascade do |t|
     t.string "name"
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "darkness"
+    t.string "movie"
+    t.string "story"
+    t.string "month"
   end
 
 end

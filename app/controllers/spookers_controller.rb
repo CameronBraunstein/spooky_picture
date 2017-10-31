@@ -23,10 +23,6 @@ class SpookersController < ApplicationController
 
 
   def spooky_hash spooker_params
-    p  "Here!!!!!!!!", spooker_params
-    if spooker_params[:name] == "c"
-      return 2
-    end
     1
   end
 
@@ -35,7 +31,6 @@ class SpookersController < ApplicationController
   def create
     @spooker = Spooker.new(spooker_params)
     @spooker.picture = spooky_hash spooker_params
-
     respond_to do |format|
       if @spooker.save
         format.html { redirect_to @spooker }
@@ -79,6 +74,6 @@ class SpookersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spooker_params
-      params.require(:spooker).permit(:name, :picture)
+      params.require(:spooker).permit(:name, :picture, :darkness, :story, :month, :movie)
     end
 end

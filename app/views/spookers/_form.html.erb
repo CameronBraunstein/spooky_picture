@@ -3,6 +3,8 @@
       <%= f.input :name %>
       <%= f.input :darkness, :as => :boolean %>
       <%= f.input :story %>
+      <% @movies = ["Ghostbusters", "Hocus Pocus", "The Nightmare Before Christmas", "The Nightmare on Elmstreet", "Halloween", "Beetlejuice", "The Exorcist", "Young Frankenstein"] %>
+      <%= f.input :movie, :as => :select, :collection => @movies %>
       <%= f.input :month %>
     <% end %>
     <%= f.actions do %>

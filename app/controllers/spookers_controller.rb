@@ -30,6 +30,7 @@ class SpookersController < ApplicationController
     end
     h *= spooker_params[:story].length
     h *= spooker_params[:month].length
+    h -= spooker_params[:movie].length
     h = h%10
   end
 

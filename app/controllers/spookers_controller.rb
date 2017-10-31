@@ -23,7 +23,14 @@ class SpookersController < ApplicationController
 
 
   def spooky_hash spooker_params
-    1
+    h = 0;
+    h += spooker_params[:name].length
+    if spooker_params[:darkness] == true
+      h = -h
+    end
+    h *= spooker_params[:story].length
+    h *= spooker_params[:month].length
+    h = h%10
   end
 
   # POST /spookers

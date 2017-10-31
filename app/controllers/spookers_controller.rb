@@ -21,7 +21,12 @@ class SpookersController < ApplicationController
   def edit
   end
 
+
   def spooky_hash spooker_params
+    p  "Here!!!!!!!!", spooker_params
+    if spooker_params[:name] == "c"
+      return 2
+    end
     1
   end
 

@@ -1,0 +1,2 @@
+class Spooker < ApplicationRecord
+end

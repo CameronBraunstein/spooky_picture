@@ -1,0 +1,2 @@
+module SpookersHelper
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @spooker.name %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @spooker.picture %>
+</p>
+
+<%= link_to 'Edit', edit_spooker_path(@spooker) %> |
+<%= link_to 'Back', spookers_path %>

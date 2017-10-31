@@ -1,0 +1,27 @@
+<%= form_with(model: spooker, local: true) do |form| %>
+  <% if spooker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(spooker.errors.count, "error") %> prohibited this spooker from being saved:</h2>
+
+      <ul>
+      <% spooker.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :spooker_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.text_field :picture, id: :spooker_picture %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Spookers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spookers.each do |spooker| %>
+      <tr>
+        <td><%= spooker.name %></td>
+        <td><%= spooker.picture %></td>
+        <td><%= link_to 'Show', spooker %></td>
+        <td><%= link_to 'Edit', edit_spooker_path(spooker) %></td>
+        <td><%= link_to 'Destroy', spooker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spooker', new_spooker_path %>

@@ -21,14 +21,19 @@ class SpookersController < ApplicationController
   def edit
   end
 
+  def spooky_hash spooker_params
+    1
+  end
+
   # POST /spookers
   # POST /spookers.json
   def create
     @spooker = Spooker.new(spooker_params)
+    @spooker.picture = spooky_hash spooker_params
 
     respond_to do |format|
       if @spooker.save
-        format.html { redirect_to @spooker, notice: 'Spooker was successfully created.' }
+        format.html { redirect_to @spooker }
         format.json { render :show, status: :created, location: @spooker }
       else
         format.html { render :new }

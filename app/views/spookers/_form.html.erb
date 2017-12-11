@@ -1,6 +1,6 @@
 <%= semantic_form_for @spooker do |f| %>
     <%= f.inputs do %>
-      <%= f.input :name %>
+      <%= f.input :name%>
       <%= f.input :darkness, :as => :boolean %>
       <%= f.input :story %>
       <% @movies = ["Ghostbusters", "Hocus Pocus", "The Nightmare Before Christmas", "The Nightmare on Elmstreet", "Halloween", "Beetlejuice", "The Exorcist", "Young Frankenstein"] %>
@@ -8,6 +8,6 @@
       <%= f.input :month %>
     <% end %>
     <%= f.actions do %>
-      <%= f.action :submit, :as => :button %>
+      <%= f.action :submit, :as => :button, :label => "See your Spooky Picture!"  %>
     <% end %>
   <% end %>
